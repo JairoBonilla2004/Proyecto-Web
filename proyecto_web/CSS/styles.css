@@ -1,1 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary: #1a365d;
+  --secondary: #2b6cb0;
+  --accent: #f6ad55;
+  --white: #ffffff;
+  --primary-section: #1a1a1a;
+  --secondary-section: #ff3e3e;
+  --gray: #4a4a4a;
+  --card-bg: #242424;
+  --hover: #ff5252;
+}
 
