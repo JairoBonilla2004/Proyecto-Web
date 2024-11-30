@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Fútbol Profesional</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Profesional</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+  </head>
+  <body>
     <div class="container">
-        <form class="login-form">
-            <div class="form-header">
-                <h2>Iniciar Sesión</h2>
-                <div class="football-icon"></div>
+      <div class="left-side">
+        <h1>Bienvenido a nuestra plataforma</h1>
+        <p>
+          Accede a tu cuenta para disfrutar de todos nuestros servicios premium
+          y características exclusivas. Tu experiencia personalizada comienza
+          aquí.
+        </p>
+      </div>
+      <div class="right-side">
+        <div class="login-container">
+          <div class="login-header">
+            <h1>⚽ Fútbol ID</h1>
+            <p>Inicia sesión para acceder a tu cuenta</p>
+          </div>
+          <form class="login-form">
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="ejemplo@correo.com"
+              />
+              <i>✉️</i>
             </div>
-            <div class="input-group">
-                <input type="text" id="username" required>
-                <label for="username">Usuario</label>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="Ingresa tu contraseña"
+              />
+              <i>🔒</i>
             </div>
-            <div class="input-group">
-                <input type="password" id="password" required>
-                <label for="password">Contraseña</label>
+            <button type="submit" class="login-btn">Iniciar Sesión</button>
+            <div class="links">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+              <a href="#">Registrarse</a>
             </div>
-            <button type="submit" class="submit-btn">
-                <span>Entrar</span>
-            </button>
-            <div class="form-footer">
-                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-                <a href="#" class="register">Registrarse</a>
+          </form>
+          <div class="social-login">
+            <p>O inicia sesión con:</p>
+            <div class="social-icons">
+              <a href="#" title="Facebook">📘</a>
+              <a href="#" title="Google">🌐</a>
+              <a href="#" title="Twitter">🐦</a>
             </div>
-        </form>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-
