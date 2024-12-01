@@ -251,3 +251,8 @@
 a{
     text-decoration: none;
 }
+
+.login-form  input[required]:valid{
+    border: rgb(3, 190, 3) solid 2px;
+    box-shadow: 1px 1px 5px rgb(3, 190, 3);
+}
