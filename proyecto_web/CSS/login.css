@@ -90,7 +90,6 @@
     display: block;
     margin-bottom: 8px;
     color: #555;
-    font-weight: 500;
 }
 
 .form-group input {
@@ -254,5 +253,6 @@ a{
 
 .login-form  input[required]:valid{
     border: rgb(3, 190, 3) solid 2px;
-    box-shadow: 1px 1px 5px rgb(3, 190, 3);
+    box-shadow: 1px 1px 3px rgb(3, 190, 3);
 }
+
