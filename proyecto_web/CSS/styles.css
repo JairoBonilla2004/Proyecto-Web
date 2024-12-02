@@ -590,7 +590,7 @@ hr{
   top: 5px;
 }
 
-.theme-checkbox:checked ~ div.index-container *:not(.hero-content, .hero-title, .hero-subtitle){
+.theme-checkbox:checked ~ div.index-container *:not(.hero-content, .hero-title, .hero-subtitle, .hero *){
   background-color: white;
   color: #000000;
   visibility: 1;
