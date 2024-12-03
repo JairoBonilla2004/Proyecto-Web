@@ -7,19 +7,7 @@
     --text-color: #ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--primary-section);
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
 
 .container {
     max-width: 1200px;
@@ -27,12 +15,8 @@ body {
     padding: 40px 20px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
 
-h1 {
+#futbol-title {
     font-size: 3em;
     color: var(--secondary-section);
     text-transform: uppercase;
@@ -40,7 +24,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2 {
+#date-calendar {
     font-size: 2em;
     color: var(--text-color);
 }
@@ -213,10 +197,9 @@ h2 {
         transform: translateY(0);
     }
 }
-.header{
+.header-calendario{
     position: sticky;
     top: 0px;
-    width: 100%;
 }
 
 .calendario{
