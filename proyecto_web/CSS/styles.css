@@ -325,108 +325,6 @@ li{
   box-shadow: 0 5px 15px rgba(255, 62, 62, 0.3);
 }
 
-.matches {
-  background: var(--primary-section);
-  padding: 6rem 0;
-}
-
-.matches-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.match-card {
-  background: var(--card-bg);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: calc(50% - 1rem);
-  min-width: 300px;
-}
-
-.match-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  background: #1a1a1a;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.brand-logo {
-  height: 30px;
-  margin-bottom: 1rem;
-}
-
-.card-header h3 {
-  color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.date-badge {
-  background: var(--secondary-section);
-  color: var(--white);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.match-content {
-  padding: 1.5rem;
-}
-
-.team-vs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.team {
-  font-weight: 600;
-}
-
-.vs {
-  color: var(--secondary-section);
-  font-weight: bold;
-  padding: 0 1rem;
-}
-
-.match-time {
-  text-align: center;
-  color: var(--secondary-section);
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.match-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.match-item {
-  padding: 1rem;
-  border-bottom: 1px solid #333;
-  transition: background-color 0.3s ease;
-}
-
-.match-item:last-child {
-  border-bottom: none;
-}
-
-.match-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
 .fair-play {
   background: var(--gray);
   padding: 6rem 0;
@@ -598,3 +496,125 @@ hr{
   background: white;
 }
 
+.tickets-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../IMG/soccer-players-action-professional-stadium.jpg") center/cover;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.tickets-title {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tickets-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.match-card {
+  flex: 0 0 400px;
+  height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-10px);
+}
+
+.serie-a-logo {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.match-date {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.team-logo {
+  width: 50px;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.status {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.notify-btn {
+  background: #ff0055;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.notify-btn:hover {
+  background: #ff1a6b;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-navigation{
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-navigation:hover {
+  background: white;
+  color: black;
+}
