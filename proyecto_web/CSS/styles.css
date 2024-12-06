@@ -137,7 +137,7 @@ li{
 }
 
 .slide:nth-child(1) {
-  background-image: url("https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=1950&q=80");
+  background-image: url(../IMG/img-tickeds/arquero_principal.jpg);
 }
 .slide:nth-child(2) {
   background-image: url("https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1950&q=80");
@@ -428,15 +428,17 @@ li{
 }
 
 /* From Uiverse.io by cuzpq */ 
+/* From Uiverse.io by cuzpq */ 
 .theme-checkbox {
   --toggle-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 6.25em;
+  width: 4rem;
   height: 3.125em;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-  background: linear-gradient(to right, var(--hover) 50%, #ffffff 50%) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
   background-size: 205%;
   background-position: 0;
   -webkit-transition: 0.4s;
@@ -456,7 +458,8 @@ li{
   top: 0.438em;
   left: 0.438em;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-  background: linear-gradient(to right, #000000 50%, #000000 50%) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
   background-size: 205%;
   background-position: 100%;
   border-radius: 50%;
@@ -469,6 +472,9 @@ li{
   left: calc(100% - 2.25em - 0.438em);
   background-position: 0;
 }
+
+.theme-checkbox:checked {
+  background-position: 100%;}
 
 hr{
   visibility: 0;
@@ -485,15 +491,7 @@ hr{
   position: fixed;
   z-index: 2000;
   right: 20px;
-  top: 5px;
-}
-
-.theme-checkbox:checked ~ div.index-container *:not(.hero-content, .hero-title, .hero-subtitle, .hero *){
-  background-color: white;
-  color: #000000;
-  visibility: 1;
-  opacity: 1;
-  background: white;
+  top: 20px;
 }
 
 .tickets-section {
@@ -517,9 +515,9 @@ hr{
   overflow-x: auto;
   padding: 1rem 0;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 
 .match-card {
   flex: 0 0 400px;
@@ -534,6 +532,62 @@ hr{
   position: relative;
   transition: transform 0.3s ease;
 }
+
+.match-card-1{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+   url(../IMG/img-tickeds/estadio.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.match-card-2{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+   url(../IMG/img-tickeds/cityscape.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.match-card-3{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url(../IMG/img-tickeds/stadio-gente.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.match-card-4{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url(../IMG/img-tickeds/ball.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.match-card-5{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2017/04/23/5fa3c5324c812.jpeg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.match-card-6{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url(../IMG/img-tickeds/arquero_principal.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.match-card-7{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url(../IMG/img-tickeds/ball.avif);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .match-card:hover {
   transform: translateY(-10px);
@@ -550,6 +604,7 @@ hr{
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
+
 
 .teams {
   display: flex;
@@ -617,4 +672,12 @@ hr{
 .btn-navigation:hover {
   background: white;
   color: black;
+}
+
+.theme-checkbox:checked ~ div.index-container :not( .hero-content, .hero-title, .hero-subtitle, .hero *, .tickets-section , .tickets-section *){
+  background-color: white;
+  color: #000000;
+  visibility: 1;
+  opacity: 1;
+  background: white;
 }
