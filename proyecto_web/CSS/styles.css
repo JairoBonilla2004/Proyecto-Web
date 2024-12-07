@@ -52,7 +52,7 @@ li {
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -71,6 +71,7 @@ li {
 
 .nav-links {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   list-style: none;
 }
@@ -326,6 +327,7 @@ li {
 }
 
 .fair-play {
+  scroll-margin-top: 160px;
   background: var(--gray);
   padding: 6rem 0;
 }
@@ -829,6 +831,7 @@ hr {
 
 /*seccion del nombre de las urbanizaciones*/
 .urbanizaciones-section {
+  scroll-margin-top: 289px; 
   background-color: var(--card-bg);
   height: 25vh;
   position: relative;
