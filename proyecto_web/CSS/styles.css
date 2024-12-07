@@ -16,6 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -136,7 +137,7 @@ li {
 }
 
 .slide:nth-child(1) {
-  background-image: url(../IMG/img-tickeds/arquero_principal.jpg);
+  background-image: url(../IMG/futbolista-profesional.webp);
 }
 .slide:nth-child(2) {
   background-image: url("https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1950&q=80");
@@ -237,6 +238,7 @@ li {
 
 /* Seccion Bienvenido */
 .welcome {
+  scroll-margin-top: 150px; /* Ajusta este valor según la altura del header */
   background: linear-gradient(135deg, var(--primary-section), #2a2a2a);
   padding: 6rem 0;
 }
@@ -508,7 +510,7 @@ hr {
 
 .tickets-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../IMG/soccer-players-action-professional-stadium.jpg") center/cover;
+    url("../IMG/futbolista-profesional.webp") center/cover;
   min-height: 100vh;
   padding: 4rem 2rem;
   color: white;
@@ -546,7 +548,7 @@ hr {
 
 .match-card-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/estadio.jpg);
+    url(../IMG/img-tickeds/estadio.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -554,7 +556,7 @@ hr {
 
 .match-card-2 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/cityscape.jpg);
+    url(../IMG/img-tickeds/city-profesional.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -562,7 +564,7 @@ hr {
 
 .match-card-3 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/stadio-gente.jpg);
+    url(../IMG/img-tickeds/estadio-profesional.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -570,7 +572,7 @@ hr {
 
 .match-card-4 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/ball.jpg);
+    url(../IMG/img-tickeds/ball-2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -586,14 +588,14 @@ hr {
 
 .match-card-6 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/arquero_principal.jpg);
+    url(../IMG/img-tickeds/arquero.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .match-card-7 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(../IMG/img-tickeds/ball.avif);
+    url(../IMG/img-tickeds/ball.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -697,25 +699,18 @@ hr {
 
 .section-players {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-  url("https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=2673&auto=format&fit=crop")
-    center/cover;
+    url("https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=2673&auto=format&fit=crop")
+      center/cover;
   padding: 4rem 2rem;
 }
 .players-flex {
   display: flex;
   justify-content: space-between;
+  overflow: auto;
   gap: 2rem;
   padding: 1rem;
-}
-
-.players-flex div:nth-child(1) {
-  flex-grow: 1;
-}
-.players-flex div:nth-child(2) {
-  flex-grow: 1;
-}
-.players-flex div:nth-child(3) {
-  flex-grow: 1;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .player-card {
@@ -725,25 +720,35 @@ hr {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
+  flex: 0 0 400px;
 }
 
 .player-card:hover {
   transform: translateY(-10px);
 }
 
-.player-card:nth-child(odd) {
-  background: linear-gradient(145deg, #a50044 0%, #7b003a 100%);
+.player-card:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../IMG/img-soccer-players/jugador-futbol-2.webp) top/cover;
+}
+.player-card:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../IMG/img-soccer-players/jugador-futbol-4.webp) top/cover;
 }
 
-.player-card:nth-child(even) {
-  background: linear-gradient(145deg, #004299 0%, #002d6b 100%);
+.player-card:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../IMG/img-soccer-players/jugador-futbol-3.webp) top/cover;
 }
 
-.player-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.player-card:nth-child(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../IMG/img-soccer-players/jugador-futbol-5.webp) top/cover;
+}
+
+.player-card:nth-child(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../IMG/img-soccer-players/jugador-futol-6.webp) top/cover;
 }
 
 .player-info {
@@ -822,7 +827,6 @@ hr {
   }
 }
 
-
 /*seccion del nombre de las urbanizaciones*/
 .urbanizaciones-section {
   background-color: var(--card-bg);
@@ -833,8 +837,7 @@ hr {
   justify-content: space-evenly;
 }
 
-.urbanizaciones-container{
-
+.urbanizaciones-container {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -848,17 +851,17 @@ hr {
   color: transparent;
   background: rgb(240, 238, 238);
   background-clip: text;
-  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 0 30px;
   display: inline-block;
   position: relative;
   transition: all 0.3s ease;
 }
 
-.urbanizacion-nombre:hover{
+.urbanizacion-nombre:hover {
   font-size: 3rem;
   position: relative;
-  bottom: .2rem;
+  bottom: 0.2rem;
 }
 
 .urbanizacion-nombre::before {
@@ -874,21 +877,20 @@ hr {
 
 .urbanizacion-nombre:hover::before {
   width: 100%;
-  
 }
 
-.urbanizaciones-title{
+.urbanizaciones-title {
   display: flex;
   justify-content: center;
 }
 
-.urbanizaciones-section h1{
+.urbanizaciones-section h1 {
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid var(--white) ;
+  border-right: 2px solid var(--white);
   max-width: fit-content;
 
-  animation: typingAnimation 3s steps(40, end) infinite ;
+  animation: typingAnimation 3s steps(40, end) infinite;
 }
 @keyframes typingAnimation {
   from {
@@ -898,4 +900,3 @@ hr {
     width: 25%;
   }
 }
-
