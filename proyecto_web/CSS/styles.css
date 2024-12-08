@@ -446,8 +446,8 @@ li {
       color-stop(50%, #2a2a2a)
     )
     no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: -o-linear-gradient(left, #ff0000 50%, #494848 50%) no-repeat;
+  background: linear-gradient(to right, #ff0000 50%, #494848 50%) no-repeat;
   background-size: 205%;
   background-position: 0;
   -webkit-transition: 0.4s;
@@ -474,8 +474,8 @@ li {
       color-stop(50%, #2a2a2a)
     )
     no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #000000 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #000000 50%) no-repeat;
   background-size: 205%;
   background-position: 100%;
   border-radius: 50%;
