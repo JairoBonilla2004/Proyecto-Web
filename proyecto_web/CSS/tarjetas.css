@@ -74,9 +74,8 @@ body {
 
 a{
     text-decoration: none;
-    background-color: none;
+    color: white;
 }
-
 .mini-cards {
     margin: 5px;
     display: flex;
