@@ -105,6 +105,7 @@ a{
     border-style:solid;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .card-content{
     font-family: "Poppins", sans-serif;
@@ -115,16 +116,24 @@ a{
     border-style: solid;
     padding: 5px;
 }
-.card-header:hover {
-    color: white;
-    background-color: var(--gray);
-    transition: 0.3s; 
+.card-header img {
+    transition: transform 0.5s ease-in-out; 
 }
-.card-header:hover {
-    transform: scaleX(-1);
-    transition: 0.3s;
-    
+.card-header:hover img {
+    animation: rotateBack 1s; 
 }
+@keyframes rotateBack {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg); 
+    }
+}
+
 
 
 
