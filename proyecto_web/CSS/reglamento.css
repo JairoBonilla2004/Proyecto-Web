@@ -1,0 +1,104 @@
+/* Contenedor principal para el reglamento y el asistente */
+.reglamento-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Reglamento */
+.reglamento {
+    flex: 2;
+    background-color: #242424; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Texto blanco */
+    overflow-y: auto;
+    max-height: 80vh; /* Altura máxima con scroll */
+}
+
+.reglamento h1, .reglamento h2 {
+    color: #ff3e3e; /* Rojo brillante */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.reglamento-content ul {
+    list-style-type: disc; /* Asegura que los puntos se muestren */
+    margin-left: 20px;
+    padding-left: 20px;
+    color: #ffffff; /* Aplica el color del texto también al marcador */
+}
+
+.reglamento-content li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Bot Estático */
+.bot-aside {
+    flex: 1;
+    background-color: #ff3e3e; /* Fondo rojo brillante */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Texto blanco */
+    position: sticky;
+    top: 20px; /* Se mantiene visible al hacer scroll */
+    max-height: 80vh; /* Altura máxima */
+}
+
+.bot-aside h2 {
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bot-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.bot-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.bot-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Área de texto y botón del asistente */
+.bot-content textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.bot-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff5252; /* Rojo más intenso */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bot-btn:hover {
+    background-color: #ff7070;
+    transform: scale(1.05);
+}
+
+.bot-btn:active {
+    transform: scale(0.95);
+}
