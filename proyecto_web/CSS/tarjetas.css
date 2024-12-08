@@ -77,7 +77,7 @@ a{
     color: white;
 }
 .mini-cards {
-    margin: 5px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -104,6 +104,7 @@ a{
     background-repeat: no-repeat;
     border-style:solid;
     display: flex;
+    justify-content: center;
 }
 .card-content{
     font-family: "Poppins", sans-serif;
