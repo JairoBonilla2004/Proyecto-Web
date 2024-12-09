@@ -19,7 +19,7 @@
 }
 
 .reglamento h1, .reglamento h2 {
-    color: #ff3e3e; /* Rojo brillante */
+    color: #c01313; /* Rojo brillante */
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -39,7 +39,7 @@
 /* Bot Estático */
 .bot-aside {
     flex: 1;
-    background-color: #ff3e3e; /* Fondo rojo brillante */
+    background-color: #691a1a; /* Fondo rojo brillante */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -85,7 +85,7 @@
     display: block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #ff5252; /* Rojo más intenso */
+    background-color:black; /* Rojo más intenso */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -95,7 +95,7 @@
 }
 
 .bot-btn:hover {
-    background-color: #ff7070;
+    background-color: #4e0e0e;
     transform: scale(1.05);
 }
 
