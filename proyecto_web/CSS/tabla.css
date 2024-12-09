@@ -25,31 +25,28 @@
     width: 100px; 
     height: 4px; 
     background: var(--secondary-section); 
-    animation: expandWidth 1s ease-out forwards; /* Efecto de expansión */
+    animation: expandWidth 1s ease-out forwards; 
 }
 
-/* Animación de expansión del subrayado */
 @keyframes expandWidth {
     from {
-        width: 0; /* Empieza con 0px de ancho */
+        width: 0; 
     }
     to {
-        width: 100px; /* Expande hasta 100px */
+        width: 100px;
     }
 }
 
-/* Estilo para la tabla de posiciones */
 .tabla-posiciones {
     width: 100%;
     margin: 20px 0;
-    border-collapse: collapse; /* Evita el espacio entre celdas */
-    background-color: var(--card-bg); /* Fondo oscuro */
-    border-radius: 10px; /* Bordes redondeados */
+    border-collapse: collapse; 
+    background-color: var(--card-bg);
+    border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
 }
 
-/* Estilo para las celdas de la tabla */
 .tabla-posiciones th, .tabla-posiciones td {
     padding: 10px;
     text-align: center;
@@ -57,19 +54,16 @@
     border: 1px solid var(--gray); 
 }
 
-/* Estilo para los encabezados de la tabla */
 .tabla-posiciones th {
     background-color: var(--secondary-section); 
     font-weight: bold;
     text-transform: uppercase;
 }
 
-/* Estilo para las filas pares de la tabla */
 .tabla-posiciones tr:nth-child(even) {
     background-color: var(--gray); 
 }
 
-/* Efecto de hover en las filas de la tabla */
 .tabla-posiciones tr:hover {
     background-color: var(--hover); 
 }
