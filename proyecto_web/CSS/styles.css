@@ -646,7 +646,7 @@ hr {
 }
 
 .notify-btn {
-  background: #ff0055;
+  background: var(--hover);
   color: white;
   border: none;
   padding: 0.8rem 2rem;
@@ -658,7 +658,7 @@ hr {
 }
 
 .notify-btn:hover {
-  background: #ff1a6b;
+  background: var(--secondary-section);
 }
 
 .navigation {
@@ -671,10 +671,10 @@ hr {
 .btn-navigation {
   width: 40px;
   height: 40px;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   border-radius: 50%;
   background: transparent;
-  color: white;
+  color: var(--white);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -690,11 +690,11 @@ hr {
 .theme-checkbox:checked
   ~ div.index-container
   :not(.without-theme, .without-theme *) {
-  background-color: white;
-  color: #000000;
+  background-color: var(--white);
+  color: var(--primary-section);
   visibility: 1;
   opacity: 1;
-  background: white;
+  background: var(--white);
 }
 
 /**/
@@ -781,7 +781,7 @@ hr {
 
 .player-position {
   font-size: 1rem;
-  color: #ffd700;
+  color: var(--accent);
   margin-bottom: 1.5rem;
 }
 
@@ -811,7 +811,7 @@ hr {
 
 .stat-label {
   font-size: 0.8rem;
-  color: #cccccc;
+  color: var(--white);
 }
 
 .nav-button:hover {
@@ -874,7 +874,7 @@ hr {
   top: 0;
   width: 0;
   height: 100%;
-  color: #ffffff;
+  color: var(--white);
   overflow: hidden;
 }
 
@@ -908,4 +908,8 @@ hr {
 
 .section-players{
   padding-top:8rem ;
+}
+
+.match-card img{
+  border-radius: 50%;
 }
