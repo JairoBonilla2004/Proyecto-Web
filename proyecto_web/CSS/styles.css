@@ -446,8 +446,8 @@ li {
       color-stop(50%, #2a2a2a)
     )
     no-repeat;
-  background: -o-linear-gradient(left, #ff0000 50%, #494848 50%) no-repeat;
-  background: linear-gradient(to right, #ff0000 50%, #494848 50%) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
   background-size: 205%;
   background-position: 0;
   -webkit-transition: 0.4s;
@@ -474,8 +474,8 @@ li {
       color-stop(50%, #2a2a2a)
     )
     no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #000000 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #000000 50%) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
   background-size: 205%;
   background-position: 100%;
   border-radius: 50%;
@@ -895,6 +895,8 @@ hr {
 
   animation: typingAnimation 3s steps(40, end) infinite;
 }
+
+
 @keyframes typingAnimation {
   from {
     width: 0%;
@@ -904,71 +906,3 @@ hr {
   }
 }
 
-.tabla-posiciones {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.tabla-posiciones th, .tabla-posiciones td {
-    padding: 10px;
-    text-align: center;
-    color: var(--text-color);
-    border: 1px solid var(--gray);
-}
-
-.tabla-posiciones th {
-    background-color: var(--secondary-section);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.tabla-posiciones tr:nth-child(even) {
-    background-color: var(--gray);
-}
-
-.tabla-posiciones tr:hover {
-    background-color: var(--hover);
-}
-
-
-/* Contenedor principal para la página Acerca de Nosotros */
-.acerca-container {
-  margin-top: 120px; /* Para evitar superposición con el nav */
-  padding: 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  color: var(--text-color);
-}
-
-/* Secciones internas */
-.acerca-content h2 {
-  
-  margin-bottom: 20px; /* Aumenta el espaciado debajo del título */
-  margin-top: 30px; /* Espaciado adicional antes de cada sección */
-  text-transform: uppercase;
-}
-
-.acerca-content p {
-  margin-bottom: 20px; /* Aumenta el espaciado entre párrafos */
-  line-height: 1.8; /* Aumenta la separación entre líneas */
-}
-
-.acerca-content ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 30px; /* Más espacio debajo de la lista */
-}
-
-.acerca-content ul li {
-  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
-  
-}
