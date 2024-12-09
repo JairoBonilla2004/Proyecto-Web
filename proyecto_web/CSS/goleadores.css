@@ -232,13 +232,3 @@ body {
     background: rgba(255, 255, 255, 0.2);
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }

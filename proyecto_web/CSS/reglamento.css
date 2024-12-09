@@ -1,144 +1,39 @@
 /* Contenedor principal para el reglamento y el asistente */
-.header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem 2rem;
-    transition: background-color 0.3s ease;
-  }
-
 .reglamento-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    gap: 20px; 
 }
 
-/* Reglamento */
+
 .reglamento {
-    flex: 2;
-    background-color: #242424; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: #ffffff; 
-    overflow-y: auto;
-    max-height: 80vh; /* Altura máxima con scroll */
-}
-
-.reglamento h1, .reglamento h2 {
-    color: #c01313; 
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.reglamento-content ul {
-    list-style-type: disc; 
-    margin-left: 20px;
-    padding-left: 20px;
-    color: #ffffff; 
-}
-
-.reglamento-content li {
-    margin-bottom: 10px; 
-    color: #ffffff; 
+    flex: 2; 
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
+    max-height: 80vh; 
 }
 
 /* Bot Estático */
 .bot-aside {
-    flex: 1;
-    background-color: #691a1a; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: #ffffff; 
-    position: sticky;
-    top: 20px; /* Se mantiene visible al hacer scroll */
+    flex: 1; 
+    position: sticky; 
+    top: 20px; 
     max-height: 80vh; 
-}
-
-.bot-aside h2 {
-    color: #ffffff; 
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.bot-content p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.bot-content ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #ffffff;
-}
-
-.bot-content ul li {
-    margin-bottom: 5px;
 }
 
 /* Área de texto y botón del asistente */
 .bot-content textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    resize: none;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    resize: none; 
 }
 
-.bot-btn {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color:black; 
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.bot-btn:hover {
-    background-color: #4e0e0e;
-    transform: scale(1.05);
-}
-
-.bot-btn:active {
-    transform: scale(0.95);
-}
 
 /* Contenedor de la política */
 .politica-container {
-    margin-top: 120px;
-    padding: 20px;
-    max-width: 800px;
     margin-left: auto;
-    margin-right: auto;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: var(--text-color);
+    margin-right: auto; 
+    max-width: 800px; 
 }
 
-.politica-content h2, .politica-content h3 {
-    color: var(--secondary-section);
-    margin-bottom: 15px;
-    margin-top: 25px;
-}
-
-.politica-content p, .politica-content ul {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
+/* Estilo de títulos y listas dentro del contenedor de política */
 .politica-content ul li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style-type: disc; 
 }
-
