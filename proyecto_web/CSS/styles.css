@@ -854,7 +854,7 @@ hr {
   color: transparent;
   background: rgb(240, 238, 238);
   background-clip: text;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 10px;
   margin: 0 30px;
   display: inline-block;
   position: relative;

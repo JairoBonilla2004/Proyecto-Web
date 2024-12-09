@@ -30,10 +30,11 @@
 .dias-semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    background-color: var(--secondary-section);
     padding: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgb(103, 101, 101) 3%, rgba(255,0,0,1) 50%, rgba(192,192,192,1) 100%);
 }
 
 .fechas {
