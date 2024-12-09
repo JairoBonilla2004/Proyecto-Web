@@ -1,4 +1,13 @@
 /* Contenedor principal para el reglamento y el asistente */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+  }
+
 .reglamento-container {
     display: flex;
     justify-content: space-between;
@@ -9,48 +18,48 @@
 /* Reglamento */
 .reglamento {
     flex: 2;
-    background-color: #242424; /* Fondo oscuro */
+    background-color: #242424; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     overflow-y: auto;
     max-height: 80vh; /* Altura máxima con scroll */
 }
 
 .reglamento h1, .reglamento h2 {
-    color: #c01313; /* Rojo brillante */
+    color: #c01313; 
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .reglamento-content ul {
-    list-style-type: disc; /* Asegura que los puntos se muestren */
+    list-style-type: disc; 
     margin-left: 20px;
     padding-left: 20px;
-    color: #ffffff; /* Aplica el color del texto también al marcador */
+    color: #ffffff; 
 }
 
 .reglamento-content li {
-    margin-bottom: 10px; /* Espaciado entre elementos */
-    color: #ffffff; /* Texto blanco */
+    margin-bottom: 10px; 
+    color: #ffffff; 
 }
 
 /* Bot Estático */
 .bot-aside {
     flex: 1;
-    background-color: #691a1a; /* Fondo rojo brillante */
+    background-color: #691a1a; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     position: sticky;
     top: 20px; /* Se mantiene visible al hacer scroll */
-    max-height: 80vh; /* Altura máxima */
+    max-height: 80vh; 
 }
 
 .bot-aside h2 {
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     text-align: center;
     margin-bottom: 10px;
 }
@@ -85,7 +94,7 @@
     display: block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color:black; /* Rojo más intenso */
+    background-color:black; 
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -132,3 +141,4 @@
     list-style-type: disc;
     margin-left: 20px;
 }
+
