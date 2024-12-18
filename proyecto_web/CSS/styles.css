@@ -10,6 +10,7 @@
   --gray: #4a4a4a;
   --card-bg: #242424;
   --hover: #ff5252;
+  --welcome-section: #cccccc;
 }
 
 * {
@@ -240,7 +241,7 @@ li {
 /* Seccion Bienvenido */
 .welcome {
   scroll-margin-top: 150px; /* Ajusta este valor según la altura del header */
-  background: linear-gradient(135deg, var(--primary-section), #2a2a2a);
+  background: linear-gradient(135deg, var(--primary-section), var(--card-bg));
   padding: 6rem 0;
 }
 
@@ -277,7 +278,7 @@ li {
   line-height: 1.8;
   margin-bottom: 3rem;
   text-align: center;
-  color: #cccccc;
+  color: var(--welcome-section);
 }
 
 .nav-buttons {
@@ -854,7 +855,7 @@ hr {
   color: transparent;
   background: rgb(240, 238, 238);
   background-clip: text;
-  text-shadow: 0 0 10px;
+  text-shadow: 0 0 10px ;
   margin: 0 30px;
   display: inline-block;
   position: relative;
