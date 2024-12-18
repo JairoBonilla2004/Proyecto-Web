@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 :root {
+  /*fondo claro*/
+  --white: rgb(240, 235, 235,.9);
+ --letra: black;
+
+  /*modo oscuro*/
+  --gray: #4a4a4a;
+  --card-bg: #242424;
   --primary: #1a365d;
   --secondary: #2b6cb0;
   --accent: #f6ad55;
-  --white: #ffffff;
   --primary-section: #1a1a1a;
   --secondary-section: #ff3e3e;
-  --gray: #4a4a4a;
-  --card-bg: #242424;
   --hover: #ff5252;
   --welcome-section: #cccccc;
 }
@@ -47,9 +51,10 @@ li {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--white);
   padding: 1rem 2rem;
   transition: background-color 0.3s ease;
+
 }
 .nav {
   display: flex;
@@ -58,7 +63,7 @@ li {
 }
 
 .logo {
-  color: var(--white);
+  color: var(--letra);
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
@@ -78,7 +83,6 @@ li {
 }
 
 .nav-link {
-  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -430,85 +434,22 @@ li {
   transform: translateY(-3px);
 }
 
-/* From Uiverse.io by cuzpq */
-/* From Uiverse.io by cuzpq */
-.theme-checkbox {
-  --toggle-size: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 4rem;
-  height: 3.125em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, #efefef),
-      color-stop(50%, #2a2a2a)
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 0;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 99em;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--toggle-size);
-}
-
-.theme-checkbox::before {
-  content: "";
-  width: 2.25em;
-  height: 2.25em;
-  position: absolute;
-  top: 0.438em;
-  left: 0.438em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, #efefef),
-      color-stop(50%, #2a2a2a)
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 100%;
-  border-radius: 50%;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.theme-checkbox:checked::before {
-  left: calc(100% - 2.25em - 0.438em);
-  background-position: 0;
-}
-
-.theme-checkbox:checked {
-  background-position: 100%;
-}
-
 hr {
   visibility: 0;
   opacity: 0;
 }
 
-.theme-checkbox:checked ~ body {
-  background-position: 100%;
-  background-color: rgb(6, 44, 120);
-}
-
-.theme-checkbox {
+.button-theme{
   position: fixed;
   z-index: 2000;
-  right: 20px;
-  top: 20px;
+  bottom: 30px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  padding: .5rem;
+  color: aliceblue;
+  border: white solid .5px;
+  cursor: pointer;
 }
 
 .tickets-section {
