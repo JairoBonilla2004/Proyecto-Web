@@ -3,6 +3,7 @@
 :root {
   /*fondo claro*/
   --white: rgb(240, 235, 235,.9);
+  --white-play:#e0e0e0;
  --letra: black;
 
   /*modo oscuro*/
@@ -28,7 +29,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--white);
-  background-color: var(--primary-section);
+  background-color: var(--white);
 }
 li {
   list-style: none;
@@ -44,6 +45,7 @@ li {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  color: var(--letra);
 }
 
 /* Header Styles */
@@ -54,7 +56,6 @@ li {
   background-color: var(--white);
   padding: 1rem 2rem;
   transition: background-color 0.3s ease;
-
 }
 .nav {
   display: flex;
@@ -89,6 +90,8 @@ li {
   border-radius: 4px;
   transition: all 0.3s ease;
   position: relative;
+  color: var(--letra);
+
 }
 
 .nav-links .nav-link:hover {
@@ -242,11 +245,11 @@ li {
   }
 }
 
-/* Seccion Bienvenido */
 .welcome {
-  scroll-margin-top: 150px; /* Ajusta este valor según la altura del header */
-  background: linear-gradient(135deg, var(--primary-section), var(--card-bg));
+  scroll-margin-top: 150px;
+  background: linear-gradient(135deg, var(--white), var(--white));
   padding: 6rem 0;
+  color: var(--letra);
 }
 
 .section-title {
@@ -282,7 +285,7 @@ li {
   line-height: 1.8;
   margin-bottom: 3rem;
   text-align: center;
-  color: var(--welcome-section);
+  color: inherit;
 }
 
 .nav-buttons {
@@ -307,6 +310,7 @@ li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: inherit;
 }
 
 .nav-btn::before {
@@ -333,7 +337,7 @@ li {
 
 .fair-play {
   scroll-margin-top: 160px;
-  background: var(--gray);
+  background: var(--white-play);
   padding: 6rem 0;
 }
 
@@ -342,18 +346,25 @@ li {
   margin: 0 auto;
   text-align: center;
   line-height: 1.8;
+  color: inherit;
 }
 
 .fair-play-content p {
   margin-bottom: 1.5rem;
-  color: var(--white);
+  color: var(--letra);
 }
+
+
 
 /* Footer */
 .footer {
-  background: var(--primary-section);
+  background: var(--white);
   padding: 4rem 0 2rem;
-  color: var(--white);
+  color: var(--letra);
+}
+
+.footer *{
+  color: inherit;
 }
 
 .footer-content {
@@ -386,7 +397,6 @@ li {
 }
 
 .footer-column h3 {
-  color: var(--white);
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
@@ -401,7 +411,6 @@ li {
 }
 
 .footer-column a {
-  color: #cccccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -424,13 +433,11 @@ li {
 }
 
 .social-link {
-  color: #cccccc;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover {
-  color: var(--white);
   transform: translateY(-3px);
 }
 
@@ -474,6 +481,7 @@ hr {
   padding: 1rem 0;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  color: inherit;
 }
 
 .match-card {
@@ -774,12 +782,13 @@ hr {
 /*seccion del nombre de las urbanizaciones*/
 .urbanizaciones-section {
   scroll-margin-top: 289px; 
-  background-color: var(--card-bg);
+  background-color: var(--white);
   height: 25vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  color: var(--letra);
 }
 
 .urbanizaciones-container {
@@ -801,6 +810,7 @@ hr {
   display: inline-block;
   position: relative;
   transition: all 0.3s ease;
+  color: inherit;
 }
 
 .urbanizacion-nombre:hover {
@@ -816,7 +826,7 @@ hr {
   top: 0;
   width: 0;
   height: 100%;
-  color: var(--white);
+  color: var(--card-bg);
   overflow: hidden;
 }
 

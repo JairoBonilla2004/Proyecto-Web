@@ -17,7 +17,7 @@
   position: absolute;
   height: 4px;
   width: 100%;
-  background: rgb(240, 238, 238);
+  background: var(--letra);
   border-radius: 9px;
   opacity: 1;
   left: 0;
