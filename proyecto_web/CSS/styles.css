@@ -2,11 +2,12 @@
 
 :root {
   /*fondo claro*/
-  --white: rgb(240, 235, 235,.9);
-  --white-play:#e0e0e0;
- --letra: black;
+  --white: rgb(240, 235, 235, 0.9);
+  --white-play: #e0e0e0;
+  --letra: black;
 
   /*modo oscuro*/
+  --black: rgb(0, 0, 0, 0.9);
   --gray: #4a4a4a;
   --card-bg: #242424;
   --primary: #1a365d;
@@ -91,7 +92,6 @@ li {
   transition: all 0.3s ease;
   position: relative;
   color: var(--letra);
-
 }
 
 .nav-links .nav-link:hover {
@@ -354,8 +354,6 @@ li {
   color: var(--letra);
 }
 
-
-
 /* Footer */
 .footer {
   background: var(--white);
@@ -363,7 +361,7 @@ li {
   color: var(--letra);
 }
 
-.footer *{
+.footer * {
   color: inherit;
 }
 
@@ -416,7 +414,7 @@ li {
 }
 
 .footer-column a:hover {
-  color: var(--white);
+  color: var(--hover);
 }
 
 .footer-bottom {
@@ -441,21 +439,16 @@ li {
   transform: translateY(-3px);
 }
 
-hr {
-  visibility: 0;
-  opacity: 0;
-}
-
-.button-theme{
+.button-theme {
   position: fixed;
   z-index: 2000;
   bottom: 30px;
   left: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  padding: .5rem;
+  padding: 0.5rem;
   color: aliceblue;
-  border: white solid .5px;
+  border: white solid 0.5px;
   cursor: pointer;
 }
 
@@ -781,7 +774,7 @@ hr {
 
 /*seccion del nombre de las urbanizaciones*/
 .urbanizaciones-section {
-  scroll-margin-top: 289px; 
+  scroll-margin-top: 289px;
   background-color: var(--white);
   height: 25vh;
   position: relative;
@@ -805,7 +798,7 @@ hr {
   color: transparent;
   background: rgb(240, 238, 238);
   background-clip: text;
-  text-shadow: 0 0 10px ;
+  text-shadow: 0 0 10px;
   margin: 0 30px;
   display: inline-block;
   position: relative;
@@ -848,7 +841,6 @@ hr {
   animation: typingAnimation 3s steps(40, end) infinite;
 }
 
-
 @keyframes typingAnimation {
   from {
     width: 0%;
@@ -858,10 +850,62 @@ hr {
   }
 }
 
-.section-players{
-  padding-top:8rem ;
+.section-players {
+  padding-top: 8rem;
 }
 
-.match-card img{
+.match-card img {
   border-radius: 50%;
+}
+
+/*Color del encabezado*/
+
+.dark-theme_header {
+  background-color: var(--black);
+}
+
+.dark-theme_header a {
+  color: var(--white-play);
+}
+
+.dark-theme_header .burger * {
+  background: var(--white-play);
+}
+
+/*Color de la seccion welcome*/
+.dark-theme_welcome  {
+  background: linear-gradient(135deg, var(--primary-section), var(--card-bg));
+}
+
+.dark-theme_welcome *{
+  color: var(--welcome-section);
+
+}
+
+/*Color para las urbanizaciones inscritas*/
+.dark-theme_urb{
+  background-color: var(--card-bg);
+  color: var(--white-play);
+}
+
+.dark-theme_urb .urbanizacion-nombre::before{
+  color: white;
+}
+
+/*Color para la seccion de juego limpio*/
+.dark-theme_fair{
+  background-color: var(--gray);
+  color: var(--white-play);
+
+}
+.dark-theme_fair p, .dark-theme_fair h2{
+  color: var(--white-play);
+}
+
+/*Color Footer*/
+.dark-theme_footer{
+  background: var(--primary-section);
+}
+.dark-theme_footer *{
+  color: var(--white);
 }

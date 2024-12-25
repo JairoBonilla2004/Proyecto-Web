@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InterUrban League 2024</title>
-    <link rel="stylesheet" href="../CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,6 +19,7 @@
     />
 
     <link rel="stylesheet" href="../CSS/burger.css">
+    <link rel="stylesheet" href="../CSS/styles.css" />
   </head>
   <body>
     
@@ -27,7 +27,7 @@
     <button class="icon-button button-theme theme">
       <span class="material-symbols-outlined">dark_mode</span>
     </button>
-    <header class="header">
+    <header class="header" data-active_dark>
       <div class="content-header">
         <a href="#" class="logo">InterUrban League</a>
         <label class="burger" for="burger">
@@ -55,8 +55,7 @@
         </ul>
       </nav>
     </header>
-    <hr />
-    <section class="hero without-theme" id="hero-content">
+    <section class="hero" id="hero-content">
       <div class="slider">
         <div class="slide"></div>
         <div class="slide"></div>
@@ -73,8 +72,7 @@
         <a href="#" class="cta-button">Explorar Ahora</a>
       </div>
     </section>
-    <hr />
-    <section class="welcome" id="bienvenida">
+    <section class="welcome" id="bienvenida" data-active_dark>
       <div class="container">
         <h2 class="section-title">
           Bienvenidos a la página oficial del Campeonato de Inter urbanizaciones
@@ -109,8 +107,7 @@
         </div>
       </div>
     </section>
-    <hr />
-    <section class="tickets-section without-theme" id="tickets">
+    <section class="tickets-section" id="tickets">
       <h1 class="tickets-title">Tickets</h1>
       <div class="tickets-container">
         <!-- Match Card 1 -->
@@ -304,7 +301,7 @@
         <button class="btn-navigation">→</button>
       </div>
     </section>
-    <section class="urbanizaciones-section" id="urbanizaciones">
+    <section class="urbanizaciones-section" id="urbanizaciones" data-active_dark>
       <div class="urbanizaciones-title">
         <h1>Urbanizaciones Inscritas</h1>
       </div>
@@ -325,8 +322,7 @@
         >
       </div>
     </section>
-    <hr />
-    <section class="section-players without-theme" id="jugadores">
+    <section class="section-players" id="jugadores">
       <h1 class="tickets-title">JUGADORES</h1>
       <div class="players-flex">
         <!-- Jugador 1 -->
@@ -445,8 +441,7 @@
         <button class="btn-navigation">→</button>
       </div>
     </section>
-    <hr />
-    <section class="fair-play" id="juego-limpio">
+    <section class="fair-play" id="juego-limpio" data-active_dark>
       <div class="container">
         <h2 class="section-title">Juego Limpio</h2>
         <div class="fair-play-content">
@@ -467,8 +462,7 @@
         </div>
       </div>
     </section>
-    <hr />
-    <footer class="footer without-theme" id="sobre-nosotros">
+    <footer class="footer dark-theme_footer" id="sobre-nosotros">
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
@@ -535,5 +529,6 @@
         </div>
       </div>
     </footer>
+    <script src="../JS/index.js" type="module"></script>
   </body>
 </html>
