@@ -12,18 +12,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
 
-    <link rel="stylesheet" href="../CSS/burger.css">
+    <link rel="stylesheet" href="../CSS/burger.css" />
     <link rel="stylesheet" href="../CSS/styles.css" />
   </head>
   <body>
-    
-
     <button class="icon-button button-theme theme">
       <span class="material-symbols-outlined">dark_mode</span>
     </button>
@@ -107,201 +109,210 @@
         </div>
       </div>
     </section>
-    <section class="tickets-section" id="tickets">
-      <h1 class="tickets-title">Tickets</h1>
-      <div class="tickets-container">
-        <!-- Match Card 1 -->
-        <div class="match-card match-card-1">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="Serie A"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA DEPORTIVO CAPELO<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img
-                src="/IMG/img-logos/logo1.jpg"
-                alt="generacion-z"
-                class="team-logo"
-              />
-              <p class="team-name">Generación Z</p>
+    <section>
+      <div class="tickets-section swiper" id="tickets">
+        <h1 class="tickets-title">Tickets</h1>
+        <div class="tickets-container swiper-wrapper">
+          <!-- card list -->
+          <!-- Match Card 1 -->
+          <div class="match-card match-card-1 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="Serie A"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA DEPORTIVO CAPELO<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img
+                  src="/IMG/img-logos/logo1.jpg"
+                  alt="generacion-z"
+                  class="team-logo"
+                />
+                <p class="team-name">Generación Z</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo2.jpg"
+                  alt="Empoli"
+                  class="team-logo"
+                />
+                <p class="team-name">Flores del Valle</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo2.jpg"
-                alt="Empoli"
-                class="team-logo"
-              />
-              <p class="team-name">Flores del Valle</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificame</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificame</button>
-        </div>
-        <!--Tarjeta 2-->
-        <div class="match-card match-card-2">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo3.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 2-->
+          <div class="match-card match-card-2 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo3.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo4.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo4.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificarme</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificarme</button>
-        </div>
 
-        <!--Tarjeta 3-->
-        <div class="match-card match-card-3">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo5.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 3-->
+          <div class="match-card match-card-3 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo5.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo6.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo6.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificarme</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificarme</button>
-        </div>
 
-        <!--Tarjeta 4-->
-        <div class="match-card match-card-4">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo7.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 4-->
+          <div class="match-card match-card-4 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo7.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo8.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo8.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Coming Soon</p>
+            <button class="notify-btn">Notify Me</button>
           </div>
-          <p class="status">Coming Soon</p>
-          <button class="notify-btn">Notify Me</button>
-        </div>
 
-        <!--Tarjeta 5-->
-        <div class="match-card match-card-5">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo1.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 5-->
+          <div class="match-card match-card-5 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo1.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo3.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo3.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificarme</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificarme</button>
-        </div>
 
-        <!--Tarjeta 6-->
-        <div class="match-card match-card-6">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo2.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 6-->
+          <div class="match-card match-card-6 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo2.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo4.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo4.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificarme</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificarme</button>
-        </div>
 
-        <!--Tarjeta 2-->
-        <div class="match-card match-card-7">
-          <img
-            src="/IMG/img-logos/valle.jpg"
-            alt="flores del valle"
-            class="serie-a-logo"
-          />
-          <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
-          <div class="teams">
-            <div>
-              <img src="/IMG/img-logos/logo3.jpg" alt="" class="team-logo" />
-              <p class="team-name">Deportivo Capello</p>
+          <!--Tarjeta 2-->
+          <div class="match-card match-card-7 swiper-slide">
+            <img
+              src="/IMG/img-logos/valle.jpg"
+              alt="flores del valle"
+              class="serie-a-logo"
+            />
+            <p class="match-date">VOCALÍA FLORES DEL VALLE<br />02/02-14:45</p>
+            <div class="teams">
+              <div>
+                <img src="/IMG/img-logos/logo3.jpg" alt="" class="team-logo" />
+                <p class="team-name">Deportivo Capello</p>
+              </div>
+              <div>
+                <img
+                  src="/IMG/img-logos/logo6.jpg"
+                  alt="phoenix"
+                  class="team-logo"
+                />
+                <p class="team-name">Phoenix Sun</p>
+              </div>
             </div>
-            <div>
-              <img
-                src="/IMG/img-logos/logo6.jpg"
-                alt="phoenix"
-                class="team-logo"
-              />
-              <p class="team-name">Phoenix Sun</p>
-            </div>
+            <p class="status">Muy Pronto</p>
+            <button class="notify-btn">Notificame</button>
           </div>
-          <p class="status">Muy Pronto</p>
-          <button class="notify-btn">Notificame</button>
         </div>
-      </div>
+        <div class="swiper-pagination"></div>
 
-      <div class="navigation">
-        <button class="btn-navigation">←</button>
-        <button class="btn-navigation">→</button>
+        <div class="navigation">
+          <button class="btn-navigation btn-left swiper-button-prev"></button>
+          <button class="btn-navigation btn-right swiper-button-next"></button>
+        </div>
+        <div class="swiper-scrollbar"></div>
       </div>
     </section>
-    <section class="urbanizaciones-section" id="urbanizaciones" data-active_dark>
+    <section
+      class="urbanizaciones-section"
+      id="urbanizaciones"
+      data-active_dark
+    >
       <div class="urbanizaciones-title">
         <h1>Urbanizaciones Inscritas</h1>
       </div>
@@ -529,6 +540,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../JS/index.js" type="module"></script>
   </body>
 </html>

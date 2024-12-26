@@ -309,6 +309,7 @@ li {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   color: inherit;
 }
@@ -455,7 +456,6 @@ li {
 .tickets-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../IMG/futbolista-profesional.webp") center/cover;
-  min-height: 100vh;
   padding: 4rem 2rem;
   color: white;
 }
@@ -467,19 +467,7 @@ li {
   text-transform: uppercase;
 }
 
-.tickets-container {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding: 1rem 0;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  color: inherit;
-}
-
 .match-card {
-  flex: 0 0 400px;
-  height: 450px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   border-radius: 10px;
   display: flex;
@@ -612,22 +600,26 @@ li {
 }
 
 .btn-navigation {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--white);
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  border: 0px;
   background: transparent;
   color: var(--white);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
 
-.btn-navigation:hover {
-  background: white;
-  color: black;
+}
+.btn-navigation:hover{
+  color: var(--hover);
+}
+.swiper-pagination{
+  padding-bottom: 2rem;
+}
+.swiper-pagination-bullet{
+  background: var(--white-play);
+  width:  15px;
+  height: 15px;
+
 }
 
 .theme-checkbox:checked
@@ -873,39 +865,153 @@ li {
 }
 
 /*Color de la seccion welcome*/
-.dark-theme_welcome  {
+.dark-theme_welcome {
   background: linear-gradient(135deg, var(--primary-section), var(--card-bg));
 }
 
-.dark-theme_welcome *{
+.dark-theme_welcome * {
   color: var(--welcome-section);
-
 }
 
 /*Color para las urbanizaciones inscritas*/
-.dark-theme_urb{
+.dark-theme_urb {
   background-color: var(--card-bg);
   color: var(--white-play);
 }
 
-.dark-theme_urb .urbanizacion-nombre::before{
+.dark-theme_urb .urbanizacion-nombre::before {
   color: white;
 }
 
 /*Color para la seccion de juego limpio*/
-.dark-theme_fair{
+.dark-theme_fair {
   background-color: var(--gray);
   color: var(--white-play);
-
 }
-.dark-theme_fair p, .dark-theme_fair h2{
+.dark-theme_fair p,
+.dark-theme_fair h2 {
   color: var(--white-play);
 }
 
 /*Color Footer*/
-.dark-theme_footer{
+.dark-theme_footer {
   background: var(--primary-section);
 }
-.dark-theme_footer *{
+.dark-theme_footer * {
   color: var(--white);
+}
+
+/* other CSS code here */
+
+@media (width<= 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tickets-container,
+  .players-flex {
+    padding-bottom: 2rem;
+  }
+
+  .match-card,
+  .player-card {
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    justify-content: space-around;
+  }
+}
+
+@media (width <= 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .match-card,
+  .player-card {
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .urbanizacion-nombre {
+    font-size: 2rem;
+  }
+
+  .urbanizacion-nombre:hover {
+    font-size: 2.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+}
+
+@media (width<=480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+  }
+
+  .match-card,
+  .player-card {
+  }
+
+  .urbanizacion-nombre {
+    font-size: 1.5rem;
+  }
+
+  .urbanizacion-nombre:hover {
+    font-size: 2rem;
+  }
 }

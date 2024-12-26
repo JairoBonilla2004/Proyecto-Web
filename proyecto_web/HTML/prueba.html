@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrusel de Tarjetas Responsivo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .carousel {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel-container {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card {
+        flex: 0 0 calc(33.333% - 20px);
+        margin: 0 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        color: #777;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      .card-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .card-button:hover {
+        background-color: #0056b3;
+      }
+
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .carousel-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .carousel-arrow.prev {
+        left: 10px;
+      }
+
+      .carousel-arrow.next {
+        right: 10px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .card {
+          flex: 0 0 calc(50% - 20px);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .card {
+          flex: 0 0 calc(100% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Imagen de la tarjeta 1"
+            />
+            <div class="card-content">
+              <h2 class="card-title">Título de la Tarjeta 1</h2>
+              <p class="card-text">
+                Este es un texto de ejemplo para la tarjeta 1. Aquí puedes poner
+                una descripción o cualquier otro contenido relevante.
+              </p>
+              <a href="#" class="card-button">Leer más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Imagen de la tarjeta 2"
+            />
+            <div class="card-content">
+              <h2 class="card-title">Título de la Tarjeta 2</h2>
+              <p class="card-text">
+                Este es otro texto de ejemplo para la segunda tarjeta. Puedes
+                personalizar este contenido según tus necesidades.
+              </p>
+              <a href="#" class="card-button">Leer más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Imagen de la tarjeta 3"
+            />
+            <div class="card-content">
+              <h2 class="card-title">Título de la Tarjeta 3</h2>
+              <p class="card-text">
+                Y aquí tenemos el texto para la tercera tarjeta. Asegúrate de
+                adaptar este contenido a tu proyecto específico.
+              </p>
+              <a href="#" class="card-button">Leer más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Imagen de la tarjeta 4"
+            />
+            <div class="card-content">
+              <h2 class="card-title">Título de la Tarjeta 4</h2>
+              <p class="card-text">
+                Esta es la cuarta tarjeta del carrusel. Puedes agregar tantas
+                tarjetas como necesites.
+              </p>
+              <a href="#" class="card-button">Leer más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Imagen de la tarjeta 5"
+            />
+            <div class="card-content">
+              <h2 class="card-title">Título de la Tarjeta 5</h2>
+              <p class="card-text">
+                Y esta es la quinta tarjeta. Recuerda que puedes personalizar
+                cada tarjeta según tus necesidades.
+              </p>
+              <a href="#" class="card-button">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev">&#10094;</button>
+      <button class="carousel-arrow next">&#10095;</button>
+    </div>
+    <script >
+            document.addEventListener('DOMContentLoaded', () => {
+          const carousel = document.querySelector('.carousel-container');
+          const cards = document.querySelectorAll('.card');
+          const prevBtn = document.querySelector('.carousel-arrow.prev');
+          const nextBtn = document.querySelector('.carousel-arrow.next');
+
+          let currentIndex = 0;
+          let cardWidth = cards[0].offsetWidth;
+          let cardsPerView = 3;
+
+          function updateCardsPerView() {
+              if (window.innerWidth <= 768) {
+                  cardsPerView = 1;
+              } else if (window.innerWidth <= 1024) {
+                  cardsPerView = 2;
+              } else {
+                  cardsPerView = 3;
+              }
+              cardWidth = carousel.offsetWidth / cardsPerView;
+              updateCarousel();
+          }
+
+          function updateCarousel() {
+              carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+          }
+
+          function moveNext() {
+              if (currentIndex < cards.length - cardsPerView) {
+                  currentIndex++;
+                  updateCarousel();
+              }
+          }
+
+          function movePrev() {
+              if (currentIndex > 0) {
+                  currentIndex--;
+                  updateCarousel();
+              }
+          }
+
+          nextBtn.addEventListener('click', moveNext);
+          prevBtn.addEventListener('click', movePrev);
+
+          window.addEventListener('resize', () => {
+              updateCardsPerView();
+          });
+
+          updateCardsPerView();
+      });
+    </script>
+  </body>
+</html>

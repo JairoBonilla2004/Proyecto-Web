@@ -79,3 +79,39 @@ export function changeMode() {
     }
   });
 }
+
+export function inicializeSwiper() {
+  const swiper = new Swiper('.swiper', {
+    // Parámetros opcionales
+    direction: 'horizontal',
+    loop: true,
+    grabcursor: true,
+    spaceBetween: 30,
+
+    // Paginación
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Permitir clics en los puntos de la paginación
+      dynamicBullets: true, // Mostrar solo los puntos que se necesitan
+    },
+
+    // Flechas de navegación
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Hacer que el slider sea responsivo
+    breakpoints: {
+      0: {
+        slidesPerView: 1, // Móvil
+      },
+      620: {
+        slidesPerView: 2, // Tablet
+      },
+      1024: {
+        slidesPerView: 3, // Escritorio
+      },
+    },
+  });
+}
