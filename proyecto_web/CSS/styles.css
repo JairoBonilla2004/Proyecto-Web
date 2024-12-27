@@ -2,7 +2,7 @@
 
 :root {
   /*fondo claro*/
-  --white: rgb(240, 235, 235, 0.9);
+  --white: rgb(240, 235, 235);
   --white-play: #e0e0e0;
   --letra: black;
 
@@ -460,6 +460,7 @@ li {
   color: white;
 }
 
+
 .tickets-title {
   font-size: 3.5rem;
   margin-bottom: 3rem;
@@ -592,34 +593,25 @@ li {
   background: var(--secondary-section);
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
 
 .btn-navigation {
   width: 50px;
   height: 50px;
-
   border: 0px;
   background: transparent;
   color: var(--white);
   cursor: pointer;
-
 }
-.btn-navigation:hover{
+.btn-navigation:hover {
   color: var(--hover);
 }
-.swiper-pagination{
+.swiper-pagination {
   padding-bottom: 2rem;
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: var(--white-play);
-  width:  15px;
+  width: 15px;
   height: 15px;
-
 }
 
 .theme-checkbox:checked
@@ -640,24 +632,14 @@ li {
       center/cover;
   padding: 4rem 2rem;
 }
-.players-flex {
-  display: flex;
-  justify-content: space-between;
-  overflow: auto;
-  gap: 2rem;
-  padding: 1rem;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
 
 .player-card {
-  position: relative;
   height: 400px;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  flex: 0 0 400px;
+  padding: 2rem;
 }
 
 .player-card:hover {
@@ -753,6 +735,7 @@ li {
   background: rgba(255, 255, 255, 0.2);
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -830,7 +813,7 @@ li {
   border-right: 2px solid var(--white);
   max-width: fit-content;
 
-  animation: typingAnimation 3s steps(40, end) infinite;
+  animation: typingAnimation 3s steps(50, end) infinite;
 }
 
 @keyframes typingAnimation {
@@ -841,6 +824,16 @@ li {
     width: 25%;
   }
 }
+
+@keyframes typingAnimationMovile {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 
 .section-players {
   padding-top: 8rem;
@@ -900,8 +893,56 @@ li {
 .dark-theme_footer * {
   color: var(--white);
 }
+/*correccion swiper*/
+.swiper-pagination{
+  position: relative;
+}
+.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
+  bottom: -25px;
 
-/* other CSS code here */
+}
+
+/*Hamburguer menu*/
+
+.burger{
+  position: relative;
+  z-index: 999;
+}
+
+.container-hamburguer-nav{
+  position: fixed;
+  z-index: 888;
+  width: 30vw;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--welcome-section);
+  color: var(--primary-section);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: opacity, visibility, transform 0.5s ease-in-out;
+}
+.container-hamburguer-nav.isActive{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-hamburguer-links{
+  position: relative;
+  top: 10%;
+  padding: 2rem;
+}
+
+
+.nav-hamburguer-links a:hover{
+  color: var(--hover);
+}
+.nav-hamburguer-links li{
+  padding-bottom: 2.5rem;
+}
+
+/* Responsive */
 
 @media (width<= 1024px) {
   .hero-title {
@@ -916,14 +957,14 @@ li {
     width: 100%;
     max-width: 300px;
   }
+  .urbanizaciones-title h1 {
+    font-size: 1.5rem;
+    animation: typingAnimationMovile 3s steps(50, end) infinite;
+  }
 
   .tickets-container,
   .players-flex {
-    padding-bottom: 2rem;
-  }
-
-  .match-card,
-  .player-card {
+    padding: 2rem;
   }
 
   .footer-content {
@@ -952,10 +993,6 @@ li {
     display: none;
   }
 
-  .match-card,
-  .player-card {
-  }
-
   .nav-link {
     padding: 0.5rem 0;
   }
@@ -970,6 +1007,11 @@ li {
 
   .urbanizacion-nombre {
     font-size: 2rem;
+  }
+
+  .urbanizaciones-title h1 {
+    font-size: 1.5rem;
+    animation: typingAnimationMovile 3s steps(50, end) infinite;
   }
 
   .urbanizacion-nombre:hover {
@@ -1003,9 +1045,12 @@ li {
     font-size: 1rem;
   }
 
-  .match-card,
-  .player-card {
+  .urbanizaciones-title h1 {
+    font-size: 1.2rem;
+    animation: typingAnimationMovile 3s steps(50, end) infinite;
+
   }
+
 
   .urbanizacion-nombre {
     font-size: 1.5rem;
