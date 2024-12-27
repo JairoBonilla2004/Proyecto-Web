@@ -16,6 +16,9 @@ function activeLightTheme() {
     if (element.classList.contains("fair-play")) {
       element.classList.remove("dark-theme_fair");
     }
+    if(element.classList.contains("match-section-time")){
+      element.classList.remove("matchTime-dark-mode");
+    }
   });
 }
 
@@ -36,6 +39,10 @@ function activeDarkTheme() {
 
     if (element.classList.contains("fair-play")) {
       element.classList.add("dark-theme_fair");
+    }
+
+    if(element.classList.contains("match-section-time")){
+      element.classList.add("matchTime-dark-mode");
     }
   });
 }
