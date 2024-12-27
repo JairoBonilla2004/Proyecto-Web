@@ -1,45 +1,43 @@
 function activeLightTheme() {
   const $mode_dark = document.querySelectorAll("[data-active_dark]");
-  $mode_dark.forEach(element =>{
-    if(element.classList.contains("header")){
+  $mode_dark.forEach((element) => {
+    if (element.classList.contains("header")) {
       element.classList.remove("dark-theme_header");
     }
 
-    if(element.classList.contains("welcome")){
+    if (element.classList.contains("welcome")) {
       element.classList.remove("dark-theme_welcome");
     }
 
-    if(element.classList.contains("urbanizaciones-section")){
-      element.classList.remove("dark-theme_urb");      
+    if (element.classList.contains("urbanizaciones-section")) {
+      element.classList.remove("dark-theme_urb");
     }
 
-    if(element.classList.contains("fair-play")){
+    if (element.classList.contains("fair-play")) {
       element.classList.remove("dark-theme_fair");
     }
   });
-
 }
 
 function activeDarkTheme() {
   const $mode_dark = document.querySelectorAll("[data-active_dark]");
-  $mode_dark.forEach(element =>{
-    if(element.classList.contains("header")){
+  $mode_dark.forEach((element) => {
+    if (element.classList.contains("header")) {
       element.classList.add("dark-theme_header");
     }
 
-    if(element.classList.contains("welcome")){
+    if (element.classList.contains("welcome")) {
       element.classList.add("dark-theme_welcome");
     }
 
-    if(element.classList.contains("urbanizaciones-section")){
-      element.classList.add("dark-theme_urb");      
+    if (element.classList.contains("urbanizaciones-section")) {
+      element.classList.add("dark-theme_urb");
     }
 
-    if(element.classList.contains("fair-play")){
+    if (element.classList.contains("fair-play")) {
       element.classList.add("dark-theme_fair");
     }
   });
-
 }
 
 export function loadTheme() {
@@ -47,13 +45,13 @@ export function loadTheme() {
   if (localStorage.getItem("mode") === null) {
     localStorage.setItem("mode", "light");
     activeLightTheme();
-  }else{
-    if(localStorage.getItem("mode") === "dark_mode"){
+  } else {
+    if (localStorage.getItem("mode") === "dark_mode") {
       activeDarkTheme();
       $span.textContent = "light_mode";
     }
 
-    if(localStorage.getItem("mode") === "light_mode"){
+    if (localStorage.getItem("mode") === "light_mode") {
       activeLightTheme();
       $span.textContent = "dark_mode";
     }
@@ -81,24 +79,24 @@ export function changeMode() {
 }
 
 export function inicializeSwiper() {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     // Parámetros opcionales
-    direction: 'horizontal',
+    direction: "horizontal",
     loop: true,
     grabcursor: true,
     spaceBetween: 30,
 
     // Paginación
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true, // Permitir clics en los puntos de la paginación
       dynamicBullets: true, // Mostrar solo los puntos que se necesitan
     },
 
     // Flechas de navegación
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
 
     // Hacer que el slider sea responsivo
@@ -114,4 +112,43 @@ export function inicializeSwiper() {
       },
     },
   });
+}
+
+export function nextMatchTimer() {
+  const target = new Date("2024-12-31T23:59:59");
+
+  function updateCountdown() {
+    const current = new Date();
+    const diff = target - current;
+
+    if (diff <= 0) {
+      document.getElementById("days").textContent = "00";
+      document.getElementById("hours").textContent = "00";
+      document.getElementById("minutes").textContent = "00";
+      document.getElementById("seconds").textContent = "00";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(
+      2,
+      "0"
+    );
+    document.getElementById("minutes").textContent = String(minutes).padStart(
+      2,
+      "0"
+    );
+    document.getElementById("seconds").textContent = String(seconds).padStart(
+      2,
+      "0"
+    );
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 }
