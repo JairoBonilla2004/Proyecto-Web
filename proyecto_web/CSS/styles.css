@@ -1,21 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-:root {
-  /*fondo claro*/
-  --white: rgb(240, 235, 235);
-  --white-play: #e0e0e0;
-  --letra: black;
 
-  /*modo oscuro*/
-  --black: rgb(0, 0, 0, 0.9);
-  --gray: #4a4a4a;
-  --card-bg: #242424;
-  --accent: #f6ad55;
-  --primary-section: #1a1a1a;
-  --secondary-section: #ff3e3e;
-  --hover: #ff5252;
-  --welcome-section: #cccccc;
-}
 
 * {
   margin: 0;
@@ -459,7 +444,7 @@ li {
 }
 
 .tickets-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
   font-weight: bold;
   text-transform: uppercase;
