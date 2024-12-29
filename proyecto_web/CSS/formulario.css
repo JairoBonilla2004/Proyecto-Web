@@ -234,6 +234,15 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.header{
+  position: sticky;
+  top: 0;
+}
+
+.burger{
+  display: none;
+}
+
 @media (max-width: 992px) {
   .contact-wrapper {
       flex-direction: column;

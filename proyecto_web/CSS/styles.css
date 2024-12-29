@@ -824,44 +824,45 @@ li {
 
 /*Color del encabezado*/
 
-.dark-theme_header {
-  background-color: var(--black);
+[data-theme = "dark"] .header  {
+  background-color: var(--black) ;
+  background: black;
 }
 
-.dark-theme_header a {
+[data-theme = "dark"] .header a {
   color: var(--white-play);
 }
 
-.dark-theme_header .burger * {
+[data-theme = "dark"] .header .burger * {
   background: var(--white-play);
 }
 
 /*Color de la seccion welcome*/
-.dark-theme_welcome {
+[data-theme = "dark"] .welcome {
   background: linear-gradient(135deg, var(--primary-section), var(--card-bg));
 }
 
-.dark-theme_welcome * {
+[data-theme = "dark"] .welcome * {
   color: var(--welcome-section);
 }
 
 /*Color para las urbanizaciones inscritas*/
-.dark-theme_urb {
+[data-theme = "dark"] .urbanizaciones-section {
   background-color: var(--card-bg);
   color: var(--white-play);
 }
 
-.dark-theme_urb .urbanizacion-nombre::before {
+[data-theme = "dark"] .urbanizaciones-section  .urbanizacion-nombre::before {
   color: white;
 }
 
 /*Color para la seccion de juego limpio*/
-.dark-theme_fair {
+[data-theme = "dark"] .fair-play{
   background-color: var(--gray);
   color: var(--white-play);
 }
-.dark-theme_fair p,
-.dark-theme_fair h2 {
+[data-theme = "dark"] .fair-play p,
+[data-theme = "dark"] .fair-play h2 {
   color: var(--white-play);
 }
 
@@ -1125,17 +1126,17 @@ li {
 }
 
 /*match seccion time dark-theme*/
-.matchTime-dark-mode {
+[data-theme="dark"] .match-section-time {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url("https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=1600")
       center/cover;
 }
 
-.matchTime-dark-mode h1 {
+[data-theme="dark"] .match-section-time h1 {
   color: var(--white);
 }
 
-.matchTime-dark-mode .time-value{
+[data-theme="dark"] .match-section-time  .time-value{
   color: var(--white);
 }
 

@@ -16,7 +16,7 @@ function activeLightTheme() {
     if (element.classList.contains("fair-play")) {
       element.classList.remove("dark-theme_fair");
     }
-    if(element.classList.contains("match-section-time")){
+    if (element.classList.contains("match-section-time")) {
       element.classList.remove("matchTime-dark-mode");
     }
   });
@@ -41,28 +41,34 @@ function activeDarkTheme() {
       element.classList.add("dark-theme_fair");
     }
 
-    if(element.classList.contains("match-section-time")){
+    if (element.classList.contains("match-section-time")) {
       element.classList.add("matchTime-dark-mode");
     }
   });
 }
 
+function activeTheme(mode_storage, $span) {
+  const $html = document.documentElement;
+  if(mode_storage === "light_mode"){
+    $html.dataset.theme = "light";
+    $span.textContent = "dark_mode";
+  }else{
+    $html.dataset.theme = "dark";
+    $span.textContent = "light_mode";
+  }
+
+
+}
 export function loadTheme() {
   const $span = document.querySelector(".button-theme span");
-  if (localStorage.getItem("mode") === null) {
-    localStorage.setItem("mode", "light");
-    activeLightTheme();
-  } else {
-    if (localStorage.getItem("mode") === "dark_mode") {
-      activeDarkTheme();
-      $span.textContent = "light_mode";
-    }
-
-    if (localStorage.getItem("mode") === "light_mode") {
-      activeLightTheme();
-      $span.textContent = "dark_mode";
-    }
+  const mode = localStorage.getItem("mode");
+  if (mode === null) {
+    localStorage.setItem("mode","light_mode");
+    $span.textContent = "dark_mode";
+  }else{
+    activeTheme(mode, $span);
   }
+
 }
 
 export function changeMode() {
@@ -73,13 +79,11 @@ export function changeMode() {
       e.target.matches(".button-theme *")
     ) {
       if ($span.textContent === "dark_mode") {
-        $span.textContent = "light_mode";
         localStorage.setItem("mode", "dark_mode");
-        activeDarkTheme();
+        activeTheme(localStorage.getItem("mode"), $span);
       } else {
-        $span.textContent = "dark_mode";
         localStorage.setItem("mode", "light_mode");
-        activeLightTheme();
+        activeTheme(localStorage.getItem("mode"),$span);
       }
     }
   });
@@ -158,4 +162,29 @@ export function nextMatchTimer() {
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
+}
+
+/*funcion para camiar al siguiente html desde el html original con fetch*/
+export function changeHtml() {
+  document.addEventListener("click", (e) => {
+    if (e.target.matches("a[data-href]")) {
+      e.preventDefault();
+      const $select_page = e.target.getAttribute("data-href");
+      const $main_content = document.querySelector(".index-content");
+      fetch($select_page)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Error al cargar la página");
+          }
+          return response.text();
+        })
+        .then((html) => {
+          $main_content.innerHTML = html;
+          loadTheme();
+        })
+        .reject((err) => {
+          console.log("promesa rej", err);
+        });
+    }
+  });
 }
