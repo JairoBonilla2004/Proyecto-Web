@@ -77,7 +77,7 @@ export function inicializeSwiper() {
 }
 
 export function nextMatchTimer() {
-  const target = new Date("2024-12-31T23:59:59");
+  const target = new Date("2025-01-31T23:59:59");
 
   function updateCountdown() {
     const current = new Date();
@@ -116,26 +116,14 @@ export function nextMatchTimer() {
 }
 
 /*funcion para camiar al siguiente html desde el html original con fetch*/
-export function changeHtml() {
-  document.addEventListener("click", (e) => {
-    if (e.target.matches("a[data-href]")) {
-      e.preventDefault();
-      const $select_page = e.target.getAttribute("data-href");
-      const $main_content = document.querySelector(".index-content");
-      fetch($select_page)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Error al cargar la página");
-          }
-          return response.text();
-        })
-        .then((html) => {
-          $main_content.innerHTML = html;
-          loadTheme();
-        })
-        .reject((err) => {
-          console.log("promesa rej", err);
-        });
-    }
-  });
+export async function changeHtml(objConfig) {
+  const {url, success, error, method} = objConfig;
+  try{
+    const response = await fetch(url);
+    if(!response.ok) throw response;
+    const html = await response.text();
+    success(html);
+  }catch(err){
+    error(err);
+  }
 }
